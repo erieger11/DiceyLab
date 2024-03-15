@@ -1,14 +1,31 @@
 
 public class Bins {
+    private int[] loggedResults;
+    private int minResult;
+    private int maxResult;
 
-    static int min = Dice.numberOfDice;
-    static int max = Dice.numberOfDice * 6;
+    public Bins(int minResult, int maxResult){
+        this.minResult = minResult;
+        this.maxResult = maxResult;
+        loggedResults = new int[maxResult-minResult+1];
+    }
 
+    public void addingResults(int result){
+        loggedResults[result - minResult] += 1;
 
-    Bins results = new Bins (min,max);
-
-
+    }
+    public int returningResults(int numberRolled){
+       return loggedResults[numberRolled - minResult];
+    }
 }
+
+
+
+
+
+
+
+
 
 
 

@@ -1,15 +1,22 @@
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
 import java.util.Random;
 public class Dice {
-    static int numberOfDice;
-    public int diceRollResult (){
+    private int numberOfDice;
+    private Random random;
 
-        return (int) ((Math.random() * 6) + 1) * numberOfDice;
+    public Dice(int numberOfDice) {
+        this.numberOfDice = numberOfDice;
+        this.random = new Random();
+    }
+    public int diceRollResult () {
+        int resultOfRoll = 0;
+        for (int i = 0; i < numberOfDice; i++) {
+           resultOfRoll += random.nextInt(5) + 1;
+        }
+        return resultOfRoll;
+        }
+    //the diceRollResult
     }
 
-
-
-
-    //I creat two dice that are randomized to roll a certain amount 1-6.
-    // I need to change it where the amount of dice can be changed
-    //Then i add up the total for all the dice rolled. that should become the result.
-}
