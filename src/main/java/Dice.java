@@ -1,12 +1,11 @@
 import java.util.Random;
 public class Dice {
+    static int numberOfDice;
+    public int diceRollResult (){
 
-
-    public int totalDiceRoll(){
-        int dice1 = (int) (Math.random() * 6) + 1;
-        int dice2 = (int) (Math.random() * 6) + 1;
-        return dice1 + dice2;
+        return (int) ((Math.random() * 6) + 1) * numberOfDice;
     }
+
 
 
 
