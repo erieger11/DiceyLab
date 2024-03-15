@@ -1,8 +1,14 @@
 
 public class Bins {
-    Integer[] resultsLogged = new Integer[10];
 
-    Dice dice = new Dice();
+    public static void storingResults()
+    Integer[] resultsLogged = new Integer[11];
+
+    for(int i = 0 ; i < answer ; i++){
+        resultsLogged[totalDiceRoll()-2]++;
+    }
+
+
 
 
 }
