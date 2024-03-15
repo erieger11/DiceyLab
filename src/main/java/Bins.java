@@ -12,7 +12,6 @@ public class Bins {
 
     public void addingResults(int result){
         loggedResults[result - minResult] += 1;
-
     }
     public int returningResults(int numberRolled){
        return loggedResults[numberRolled - minResult];
